@@ -10,8 +10,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import javax.sql.DataSource;
 
-import javax.activation.DataSource;
 
 /**
  * Created by milaveaud on 22/06/2017.
@@ -25,7 +25,6 @@ public class HttpSecurityConfiguration extends WebSecurityConfigurerAdapter{
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @Autowired
     private DataSource dataSource;
 
     @Value("${spring.queries.users-query}")
