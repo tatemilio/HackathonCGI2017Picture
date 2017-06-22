@@ -20,6 +20,16 @@ public class PictureUserController {
     @Autowired
     private PictureUserRepository pictureUserRepository;
 
+
+    @RequestMapping("/test")
+    public String home(){
+
+        PictureUser pictureUser = new PictureUser();
+        pictureUser.setFirstName("David");
+        pictureUserRepository.save(pictureUser);
+        return "Hello " + pictureUser;
+    }
+
     @RequestMapping(method = RequestMethod.GET)
     public List<PictureUser> getAll(){
         return (List<PictureUser>) pictureUserRepository.findAll();

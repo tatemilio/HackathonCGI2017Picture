@@ -36,6 +36,11 @@ public class PictureUser {
         ANNECY
     }
 
+    public enum Role{
+        ADMIN,
+        USER
+    }
+
     @GeneratedValue
     @Id
     private Long id;
@@ -57,6 +62,8 @@ public class PictureUser {
     private String avatar;
 
     private String favoriteOutfit;
+
+    private String Role;
 
     private String job;
 
