@@ -7,4 +7,6 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface PictureUserRepository extends CrudRepository<PictureUser, Long> {
 
+    public PictureUser findByUsername(String username);
+
 }
