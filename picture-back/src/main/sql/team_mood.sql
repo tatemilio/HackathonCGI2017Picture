@@ -14,4 +14,5 @@ CREATE OR REPLACE VIEW public.team_mood AS
      JOIN mood_view v ON m.id = v.id AND v.rnk = 1;
 
 ALTER TABLE public.team_mood
-  OWNER TO postgres;
+  OWNER TO backend;
+
