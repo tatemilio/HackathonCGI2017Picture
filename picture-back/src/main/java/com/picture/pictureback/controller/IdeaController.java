@@ -12,7 +12,7 @@ import java.util.List;
  * Created by milaveaud on 22/06/2017.
  */
 @RestController
-@RequestMapping("/idea")
+@RequestMapping("api/idea")
 public class IdeaController {
 
     @Autowired

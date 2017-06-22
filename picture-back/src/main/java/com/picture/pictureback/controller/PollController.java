@@ -11,7 +11,7 @@ import java.util.List;
  * Created by milaveaud on 22/06/2017.
  */
 @RestController
-@RequestMapping("/poll")
+@RequestMapping("api/poll")
 public class PollController {
 
     @Autowired

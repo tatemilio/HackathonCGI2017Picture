@@ -13,7 +13,7 @@ import java.util.List;
  * Created by milaveaud on 22/06/2017.
  */
 @RestController
-@RequestMapping("/news")
+@RequestMapping("api/news")
 public class NewsController {
 
     @Autowired
@@ -40,7 +40,6 @@ public class NewsController {
         news.setId(id);
         return newsRepository.saveAndFlush(news);
     }
-
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         newsRepository.delete(id);

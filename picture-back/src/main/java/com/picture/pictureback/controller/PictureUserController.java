@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/pictureUser")
+@RequestMapping("api/pictureUser")
 public class PictureUserController {
 
     @Autowired
