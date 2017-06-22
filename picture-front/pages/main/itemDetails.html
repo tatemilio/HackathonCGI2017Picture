@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="close()"><span aria-hidden="true">&times;</span></button>
+    <h3 class="modal-title" id="modal-title">{{item.name}} <span ng-if="item.newItem" class="label label-warning small-caps">NEW</span></h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <blockquote>
+        <p>
+            {{item.description}}
+        </p>
+    </blockquote>
+
+</div>
+<div class="modal-footer">
+    <a ng-href="{{item.link}}" ng-if="item.link" class="btn btn-primary" type="button" target="_blank">More informations <i class="glyphicon glyphicon-new-window"></i></a>
+</div>
