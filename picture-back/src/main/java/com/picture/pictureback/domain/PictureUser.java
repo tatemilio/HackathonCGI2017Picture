@@ -37,6 +37,11 @@ public class PictureUser {
         ANNECY
     }
 
+    public enum Role{
+        ADMIN,
+        USER
+    }
+
     @GeneratedValue
     @Id
     private Long id;
@@ -59,9 +64,7 @@ public class PictureUser {
 
     private String favoriteOutfit;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "id"), inverseJoinColumns = @JoinColumn(name = "id"))
-    private Set<Role> roles;
+    private String role;
 
     private String job;
 
@@ -233,11 +236,11 @@ public class PictureUser {
         this.loginPassword = loginPassword;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public String getRole() {
+        return role;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setRole(String role) {
+        this.role = role;
     }
 }
