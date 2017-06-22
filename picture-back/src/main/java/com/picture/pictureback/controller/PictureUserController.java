@@ -32,13 +32,13 @@ public class PictureUserController {
     @RequestMapping(method = RequestMethod.POST)
     public PictureUser add(@RequestBody PictureUser pictureUser) {
         pictureUser.setId(null);
-        return pictureUserRepository.save(pictureUser);
+        return pictureUserRepository.saveAndFlush(pictureUser);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public PictureUser update(@RequestBody PictureUser pictureUser, @PathVariable Long id) {
         pictureUser.setId(id);
-        return pictureUserRepository.save(pictureUser);
+        return pictureUserRepository.saveAndFlush(pictureUser);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
