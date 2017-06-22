@@ -95,4 +95,9 @@ public class Idea {
     public void setIdeaFeedback(List<PollFeedback> ideaFeedback) {
         this.ideaFeedback = ideaFeedback;
     }
+
+    public boolean isClosed(){
+        return getClosedDate()!=null && (new Date()).after(getClosedDate());
+    }
+
 }

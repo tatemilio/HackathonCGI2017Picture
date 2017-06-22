@@ -110,4 +110,8 @@ public class Poll {
     public void setPollOption(List<PollFeedback> pollOption) {
         this.pollOption = pollOption;
     }
+
+    public boolean isClosed(){
+        return getClosingDate()!=null && (new Date()).after(getClosingDate());
+    }
 }
