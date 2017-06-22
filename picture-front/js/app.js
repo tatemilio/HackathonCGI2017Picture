@@ -9,6 +9,8 @@ angular.module('picture', [
   'uiSwitch',
   'ngToast',
   'picture.userService',
+  'picture.fileReader',
+  'picture.fileSelect',
   'picture.ideaFeedbackService',
   'picture.ideaService',
   'picture.moodService',
@@ -17,6 +19,8 @@ angular.module('picture', [
   'picture.pollFeedbackService',
   'picture.pollService',
   'picture.homeController',
+  'picture.welcomeController',
+  'picture.registerController',
   'picture.loginController',
   'picture.logoutController'
 ])
@@ -28,8 +32,7 @@ angular.module('picture', [
     .run(['$rootScope', '$location', 'UserService', function($rootScope, $location, UserService){
         UserService.isConnected();
         $rootScope.$on('$routeChangeStart', function(e, next, current){
-          console.log(typeof next.$$route);
-            if (typeof next.$$route == "undefined" || next.$$route.authorized){
+            if (next.$$route.authorized){
                 UserService.isConnected().then(function(response){
                         //Do nothing, continue to next page
                     },

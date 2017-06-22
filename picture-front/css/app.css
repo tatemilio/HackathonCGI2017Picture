@@ -1,8 +1,9 @@
 @import url(http://fr.allfont.net/allfont.css?fonts=arial-black);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100');
 
 body{
     font-family: "Arial  Black", Arial, sans-serif;
-    background-color: #FAFAFA;
+    background-color: #FFFFFF;
 }
 
 main{
@@ -43,9 +44,13 @@ nav.navbar-top{
   color: #FFFFFF;
 }
 
+.background-grey{
+  background-color: #324350;
+  color: #FFFFFF;
+}
 
-#login{
-  background-image: url("../img/bg-login.jpg");
+
+.home-form{
   height: 100vh;
   background-size: cover;
   background-position: top center;
@@ -53,7 +58,15 @@ nav.navbar-top{
   color: #FFFFFF;
 }
 
-#login::before{
+#login{
+  background-image: url("../img/bg-login.jpg");
+}
+
+#register{
+  background-image: url("../img/bg-register.jpg");
+}
+
+.home-form::before{
   display: block;
   content: '';
   background-color: #516676BB;
@@ -63,51 +76,55 @@ nav.navbar-top{
   z-index: 1;
 }
 
-#login > *{
+.home-form > *{
   position: relative;
   z-index: 2;
 }
 
-#login .logo{
+.home-form .logo{
   text-align: center;
 }
 
-#login .logo-img{
+.home-form .logo-img{
   width: 70vw;
   height: auto;
   margin-top: 80px;
 }
 
-#login .hero-phrase{
+.home-form .hero-phrase{
   text-align: center;
   font-size: 1.8em;
   letter-spacing: 2px;
   margin-top: 80px;
 }
 
-#login form{
+.home-form form{
   position: fixed;
   bottom: 0px;
   left: 0px;
   right: 0px;
 }
 
-#login form .form-group{
+.home-form form .form-group{
   background-color: rgba(255, 255, 255, .2);
   margin-bottom: 0px;
   padding: 10px 20px;
 }
 
-#login form .form-group:first-child{
+.home-form form .form-group:first-child{
   border-bottom: solid 1px rgba(255, 255, 255, .2);
 }
 
-#login form .form-group label{
+#register form .form-group:nth-child(-n+2){
+  border-bottom: solid 1px rgba(255, 255, 255, .2);
+}
+
+.home-form form .form-group label{
   opacity: .6;
   font-size: .9em;
 }
 
-#login form .form-group input{
+.home-form form .form-group input{
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -115,7 +132,7 @@ nav.navbar-top{
   font-weight: 600;
 }
 
-#login form button{
+.home-form form button{
   border-radius: 0px;
   background-color: #5D991C;
   border: none;
@@ -173,4 +190,165 @@ nav.navbar-top{
 	align: left
 	margin: auto;
 	padding-left: 0.5em;
+}
+
+.home-form .register{
+    text-align: center;
+    margin-top: 45px;
+    font-size: 1.2em;
+}
+
+.home-form .register a{
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.fixed-bottom{
+  position: fixed;
+  bottom:0px;
+  left: 0px;
+  right: 0px;
+}
+
+#welcome h1{
+  font-variant: small-caps;
+  font-size: 2em;
+  color: #BFBFBF;
+  padding-left: 30px;
+  margin-top: 0px;
+  padding-top: 20px;
+}
+
+#welcome h2{
+  padding: 10px 30px;
+  font-size: 1.5em;
+}
+
+#welcome .logo-small{
+  max-width: 15%;
+  float: left;
+  margin: 35px 10px;
+}
+
+#welcome .form-group{
+  margin-bottom: 20px;
+  padding: 0px 4px;
+}
+
+#welcome .background-grey{
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#welcome label{
+  font-variant: small-caps;
+  color: #BFBFBF;
+  padding: 0px 10px;
+}
+
+#welcome input{
+  border-radius: 0px;
+  border: none;
+  box-shadow: none;
+  font-size: 1.3em;
+  color: #333;
+  padding: 0px 10px;
+  border-bottom: solid 1px #BFBFBF;
+}
+
+#welcome button{
+  border-radius: 0px;
+  background-color: #5D991C;
+  border: none;
+  padding: 20px;
+}
+
+.step1 .user-avatar{
+  border-radius: 50%;
+  width: 50vw;
+  height: 50vw;
+  margin: auto;
+  border: solid 1px #FFFFFF;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+  display: block;
+  cursor: pointer;
+}
+
+.step2 .user-avatar{
+  background-color: #FFFFFF;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid 1px #FFFFFF;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+  float: left;
+  margin: 15px;
+}
+
+#welcome .step2 h2{
+  font-size: 2em;
+  font-family: 'Montserrat';
+  font-weight: 100;
+  line-height: 1.4em;
+}
+
+.welcome-text{
+  padding-left: 15px;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 600;
+}
+
+.select-mode-container-parent{
+  display: flex;
+  overflow-x: scroll;
+}
+
+.select-mode-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.select-mode{
+  width: 90vw;
+  height: 300px;
+  margin: 1vw;
+}
+
+.select-mode input{
+  display: none;
+}
+
+#welcome .select-mode label{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  position: static;
+}
+
+.mode{
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  border: solid 5px #BFBFBF;
+}
+
+#welcome .select-mode input[type="radio"]:checked + .mode{
+  border-color: solid 5px #BFBFBF;
+}
+
+.mode-adventure{
+  background-image: url("../img/bg-adventure.jpg");
+}
+
+.mode-friends{
+  background-image: url("../img/bg-friends.jpg");
+}
+
+.mode-expedition{
+  background-image: url("../img/bg-expedition.jpg");
 }

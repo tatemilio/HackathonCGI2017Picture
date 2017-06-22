@@ -1,0 +1,87 @@
+<div>
+  <div id="welcome">
+    <header>
+      <h1>première connexion</h1>
+    </header>
+
+    <div ng-show="step == 1" class="step1">
+      <div class="background-grey">
+        <img class="logo-small" src="img/logo_small_white.png" alt="Picture" />
+        <h2>Afin d'optimiser votre experience, merci de remplir ces quelques informations</h2>
+      </div>
+
+      <form ng-submit="submit()">
+
+        <div class="form-group has-feedback">
+            <label class="control-label" for="prenom">Prénom</label>
+            <input type="mail" class="form-control" id="prenom" ng-model="user.prenom" required/>
+        </div>
+
+        <div class="form-group has-feedback">
+            <label class="control-label" for="prenom">Nom</label>
+            <input type="mail" class="form-control" id="nom" ng-model="user.nom" required />
+        </div>
+
+        <div class="form-group has-feedback">
+            <label class="control-label" for="photo">Photo</label>
+            <input type="file" id="photo" ng-model="user.photo" ng-show="false" ng-file-select="onFileSelect($files)"/>
+            <div>
+              <img ng-src="{{user.avatar}}" ng-click="uploadPhoto()" class="user-avatar"/>
+            </div>
+        </div>
+
+        <div class="row fixed-bottom">
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><i class="fa fa-check fa-2x"></i></button>
+            </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div ng-show="step == 2" class="step2">
+      <div class="background-grey">
+        <img ng-src="{{user.avatar}}" ng-click="uploadPhoto()" class="step2 user-avatar"/>
+        <h2>{{user.prenom}}<br/>{{user.nom}}</h2>
+      </div>
+
+      <form ng-submit="submit()">
+        <span class="welcome-text">Vous êtes plutôt: </span>
+        <div class="select-mode-container-parent">
+          <div class="select-mode-container">
+            <div class="select-mode">
+              <label>
+                <input type="radio" name="mode" value="adventure" ng-model="user.mode" />
+                <div class="mode mode-adventure"></div>
+              </label>
+            </div>
+            <div class="select-mode">
+              <label>
+                <input type="radio" name="mode" value="friends" ng-model="user.mode" />
+                <div class="mode mode-friends"></div>
+              </label>
+            </div>
+            <div class="select-mode">
+              <label>
+                <input type="radio" name="mode" value="expedition" ng-model="user.mode" />
+                <div class="mode mode-expedition"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row fixed-bottom">
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><i class="fa fa-check fa-2x"></i></button>
+            </div>
+        </div>
+      </form>
+    </div>
+
+    <div ng-show="step == 3" class="step3">
+      Step 3
+    </div>
+
+
+  </div>
+</div>
