@@ -162,15 +162,16 @@ nav.navbar-top{
 	left: 0;	
 	width: 50%;
 	height: auto;
-}
-
-#annonce .profile .style .pic-style {
-	width: 100%;
 	border-radius: 100%;
 	background-color: red;
 }
 
+#annonce .profile .style .pic-style {
+	width: 100%;
+}
+
 #annonce .content {
+	position: relative;
 	margin: auto;
 	padding: 5px 5px 5px 20px;
 }
@@ -190,6 +191,12 @@ nav.navbar-top{
 	align: left
 	margin: auto;
 	padding-left: 0.5em;
+}
+
+#annonce .content .coment{
+	color: grey;
+	position: absolute;
+	right: 5px;
 }
 
 .home-form .register{
