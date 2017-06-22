@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('radar.userService', [])
+angular.module('picture.userService', [])
     .service('UserService', ['$http', '$q', '$rootScope', '$httpParamSerializerJQLike',
         function UserService($http, $q, $rootScope, $httpParamSerializerJQLike) {
 
