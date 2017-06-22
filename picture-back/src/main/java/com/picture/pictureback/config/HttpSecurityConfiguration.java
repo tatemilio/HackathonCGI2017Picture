@@ -1,6 +1,7 @@
 package com.picture.pictureback.config;
 
-import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
@@ -8,6 +9,9 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import javax.activation.DataSource;
 
 /**
  * Created by milaveaud on 22/06/2017.
@@ -18,6 +22,17 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Order(1)
 public class HttpSecurityConfiguration extends WebSecurityConfigurerAdapter{
 
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Autowired
+    private DataSource dataSource;
+
+    @Value("${spring.queries.users-query}")
+    private String usersQuery;
+
+    @Value("${spring.queries.roles-query}")
+    private String rolesQuery;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth)
