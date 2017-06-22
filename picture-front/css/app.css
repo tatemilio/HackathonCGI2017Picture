@@ -145,7 +145,6 @@ nav.navbar-top{
 
 #annonce .profile {
 	position: relative;
-	width: ;
 	margin: auto;
 }
 
@@ -198,6 +197,21 @@ nav.navbar-top{
 	color: grey;
 	position: absolute;
 	right: 5px;
+}
+
+#event{
+	display: flex;
+}
+
+#event .date {
+	margin: auto;
+	text-align: center;
+	font-weight: bold;
+	width: 20%;
+}
+
+#event .content {
+	margin: auto;
 }
 
 .home-form .register{
