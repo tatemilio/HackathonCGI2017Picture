@@ -21,7 +21,7 @@ public class PictureUserController {
 
     @RequestMapping(method = RequestMethod.GET)
     public List<PictureUser> getAll(){
-        return (List<PictureUser>) pictureUserRepository.findAll();
+        return pictureUserRepository.findAll();
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
