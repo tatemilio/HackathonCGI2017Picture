@@ -214,6 +214,60 @@ nav.navbar-top{
 	margin: auto;
 }
 
+#coment{
+	display: flex;
+}
+
+#coment .profile {
+	position: relative;
+	margin: auto;
+}
+
+#coment .profile .pic-profile {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	margin: 5px;
+}
+
+#coment .profile .style {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 23px;
+	width: 23px;
+	height: auto;
+	border-radius: 100%;
+	background-color: red;
+}
+
+#coment .profile .style .pic-style {
+	width: 100%;
+}
+
+#coment .content {
+	position: relative;
+	margin: auto;
+	padding: 5px 5px 5px 20px;
+}
+
+#coment .content .info{
+	margin-top: 5px;
+	display: flex;
+}
+
+#coment .content .info .user{
+	align: left
+	margin: auto;
+	padding-right: 0.5em;
+}
+
+#coment .content .info .date{
+	align: left
+	margin: auto;
+	padding-left: 0.5em;
+}
+
 .home-form .register{
     text-align: center;
     margin-top: 45px;
