@@ -1,9 +1,8 @@
 package com.picture.pictureback.controller;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import com.picture.pictureback.domain.PictureUser;
-import com.picture.pictureback.domain.PictureUserRepository;
-import org.omg.CORBA.Request;
+
+import com.picture.pictureback.repository.PictureUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,16 +18,6 @@ public class PictureUserController {
 
     @Autowired
     private PictureUserRepository pictureUserRepository;
-
-
-    @RequestMapping("/test")
-    public String home(){
-
-        PictureUser pictureUser = new PictureUser();
-        pictureUser.setFirstName("David");
-        pictureUserRepository.save(pictureUser);
-        return "Hello " + pictureUser;
-    }
 
     @RequestMapping(method = RequestMethod.GET)
     public List<PictureUser> getAll(){

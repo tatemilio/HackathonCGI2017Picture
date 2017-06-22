@@ -1,11 +1,11 @@
 package com.picture.pictureback.domain;
 
 import org.hibernate.validator.constraints.Email;
-import org.springframework.boot.actuate.endpoint.jmx.DataEndpointMBean;
 
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -37,11 +37,6 @@ public class PictureUser {
         ANNECY
     }
 
-    public enum Role{
-        ADMIN,
-        USER
-    }
-
     @GeneratedValue
     @Id
     private Long id;
@@ -64,7 +59,9 @@ public class PictureUser {
 
     private String favoriteOutfit;
 
-    private String Role;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "id"), inverseJoinColumns = @JoinColumn(name = "id"))
+    private Set<Role> roles;
 
     private String job;
 
@@ -86,6 +83,7 @@ public class PictureUser {
     @Email
     private String emailAddress;
 
+    @Transient
     private String loginPassword;
 
     public PictureUser(){
@@ -219,14 +217,6 @@ public class PictureUser {
         this.userPollFeedback = userPollFeedback;
     }
 
-    public String getRole() {
-        return Role;
-    }
-
-    public void setRole(String role) {
-        Role = role;
-    }
-
     public String getEmailAddress() {
         return emailAddress;
     }
@@ -241,5 +231,13 @@ public class PictureUser {
 
     public void setLoginPassword(String loginPassword) {
         this.loginPassword = loginPassword;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }
