@@ -9,6 +9,8 @@ angular.module('picture', [
   'uiSwitch',
   'ngToast',
   'picture.userService',
+  'picture.fileReader',
+  'picture.fileSelect',
   'picture.ideaFeedbackService',
   'picture.ideaService',
   'picture.moodService',
