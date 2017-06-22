@@ -1,46 +1,4 @@
 <div>
-    <div id="timeline">
-
-        <div class="flex-row" id="timeline-row">
-            <div class="past">
-                <div class="retired">Retired</div>
-                <div class="obsolete">Obsolete</div>
-                <div class="deprecated">Deprecated</div>
-            </div>
-            <div class="present"></div>
-            <div class="future">
-                <div class="industrialized">Industrialized</div>
-                <div class="incubation">Incubation</div>
-                <div class="identified">Identified</div>
-            </div>
-        </div>
-
-        <div class="flex-row" id="on-hold-row">
-            <div class="on-hold">On Hold</div>
-        </div>
-
-        <div class="item" ng-class="{'new': item.newItem}" ng-repeat="item in items" style="left:{{item.x}}%;top:{{item.y}}%;" ng-click="showInfo(item)">
-            <span class="item-content">{{item.id}}</span>
-            <span class="item-name">{{item.name}}</span>
-        </div>
-
-    </div>
-
-    <div id="content">
-        <div class="container">
-
-
-            <div class="box">
-                <div class="box-header">
-                    <h1>{{article.title}}</h1>
-                </div>
-                <div class="box-body">
-                    {{article.description}}
-                </div>
-            </div>
-
-        </div>
-        <div class="circle"></div>
-    </div>
+    
 
 </div>

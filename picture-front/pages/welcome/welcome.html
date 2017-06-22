@@ -1,0 +1,34 @@
+<div>
+  <div id="welcome">
+
+    <header>
+      <h1>première connexion</h1>
+    </header>
+
+    <div class="background-grey">
+      <img class="logo-small" src="img/logo_small_white.png" alt="Picture" />
+      <h2>Afin d'optimiser votre experience, merci de remplir ces quelques informations</h2>
+    </div>
+
+    <form ng-submit="submit()">
+
+      <div class="form-group has-feedback">
+          <label class="control-label" for="prenom">Prénom</label>
+          <input type="mail" class="form-control" id="prenom" ng-model="user.prenom" />
+      </div>
+
+      <div class="form-group has-feedback">
+          <label class="control-label" for="prenom">Nom</label>
+          <input type="mail" class="form-control" id="nom" ng-model="user.nom" />
+      </div>
+
+      <div class="form-group has-feedback">
+          <label class="control-label" for="photo">Photo</label>
+          <input type="mail" class="form-control" id="photo" ng-model="user.photo" />
+      </div>
+
+
+    </form>
+
+  </div>
+</div>
