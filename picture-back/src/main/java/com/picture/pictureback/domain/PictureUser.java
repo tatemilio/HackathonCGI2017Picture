@@ -1,5 +1,6 @@
 package com.picture.pictureback.domain;
 
+import org.hibernate.validator.constraints.Email;
 import org.springframework.boot.actuate.endpoint.jmx.DataEndpointMBean;
 
 import javax.persistence.*;
@@ -81,6 +82,11 @@ public class PictureUser {
     private String aboutMe;
 
     private String hobby;
+
+    @Email
+    private String emailAddress;
+
+    private String loginPassword;
 
     public PictureUser(){
     }
@@ -213,5 +219,27 @@ public class PictureUser {
         this.userPollFeedback = userPollFeedback;
     }
 
+    public String getRole() {
+        return Role;
+    }
 
+    public void setRole(String role) {
+        Role = role;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getLoginPassword() {
+        return loginPassword;
+    }
+
+    public void setLoginPassword(String loginPassword) {
+        this.loginPassword = loginPassword;
+    }
 }

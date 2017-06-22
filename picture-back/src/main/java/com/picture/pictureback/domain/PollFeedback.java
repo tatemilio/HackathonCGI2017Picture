@@ -23,7 +23,9 @@ public class PollFeedback {
 
     private Date feedbackDate;
 
-    private int feedbackRate;
+    @ManyToOne
+    @JoinColumn(name = "pollOptionId")
+    private PollOption pollOption;
 
     private String comment;
 
@@ -59,14 +61,6 @@ public class PollFeedback {
         this.feedbackDate = feedbackDate;
     }
 
-    public int getFeedbackRate() {
-        return feedbackRate;
-    }
-
-    public void setFeedbackRate(int feedbackRate) {
-        this.feedbackRate = feedbackRate;
-    }
-
     public String getComment() {
         return comment;
     }
@@ -75,4 +69,11 @@ public class PollFeedback {
         this.comment = comment;
     }
 
+    public PollOption getPollOption() {
+        return pollOption;
+    }
+
+    public void setPollOption(PollOption pollOption) {
+        this.pollOption = pollOption;
+    }
 }

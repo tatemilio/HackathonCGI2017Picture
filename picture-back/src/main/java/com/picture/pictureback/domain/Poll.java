@@ -18,6 +18,8 @@ public class Poll {
     private String summary;
     private Date openingDate;
     private Date closingDate;
+    private Long pollResult;
+    private String comment;
 
     @ManyToOne
     @JoinColumn(name = "pictureUserId")
@@ -26,6 +28,8 @@ public class Poll {
     @OneToMany(targetEntity = PollFeedback.class, mappedBy = "poll", cascade = CascadeType.ALL)
     private List<PollFeedback> pollFeedback;
 
+    @OneToMany(targetEntity = PollOption.class, mappedBy = "poll", cascade = CascadeType.ALL)
+    private List<PollFeedback> pollOption;
 
     public Long getId() {
         return id;
@@ -81,5 +85,29 @@ public class Poll {
 
     public void setPollFeedback(List<PollFeedback> pollFeedback) {
         this.pollFeedback = pollFeedback;
+    }
+
+    public Long getPollResult() {
+        return pollResult;
+    }
+
+    public void setPollResult(Long pollResult) {
+        this.pollResult = pollResult;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public List<PollFeedback> getPollOption() {
+        return pollOption;
+    }
+
+    public void setPollOption(List<PollFeedback> pollOption) {
+        this.pollOption = pollOption;
     }
 }
