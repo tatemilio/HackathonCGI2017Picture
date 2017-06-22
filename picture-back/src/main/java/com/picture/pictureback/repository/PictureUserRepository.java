@@ -1,5 +1,6 @@
-package com.picture.pictureback.domain;
+package com.picture.pictureback.repository;
 
+import com.picture.pictureback.domain.PictureUser;
 import org.springframework.data.repository.CrudRepository;
 
 /**
