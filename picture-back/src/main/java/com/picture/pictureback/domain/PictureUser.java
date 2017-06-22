@@ -64,6 +64,12 @@ public class PictureUser {
     @OneToMany(targetEntity = Mood.class, mappedBy = "pictureUser", cascade = CascadeType.ALL)
     private List<Mood> userMood;
 
+    @OneToMany(targetEntity = Poll.class, mappedBy = "pollAuthor", cascade = CascadeType.ALL)
+    private List<Poll> userPoll;
+
+    @OneToMany(targetEntity = PollFeedback.class, mappedBy = "pollVoter", cascade = CascadeType.ALL)
+    private List<PollFeedback> userPollFeedback;
+
     @Column(columnDefinition = "TEXT")
     private String aboutMe;
 
@@ -176,12 +182,29 @@ public class PictureUser {
         this.job = job;
     }
 
-
-    public List<Mood> getMoods() {
+    public List<Mood> getUserMood() {
         return userMood;
     }
 
-    public void setMood(List<Mood> moods) {
+    public void setUserMood(List<Mood> moods) {
         this.userMood = moods;
     }
+
+    public List<Poll> getUserPoll() {
+        return userPoll;
+    }
+
+    public void setUserPoll(List<Poll> userPoll) {
+        this.userPoll = userPoll;
+    }
+
+    public List<PollFeedback> getUserPollFeedback() {
+        return userPollFeedback;
+    }
+
+    public void setUserPollFeedback(List<PollFeedback> userPollFeedback) {
+        this.userPollFeedback = userPollFeedback;
+    }
+
+
 }
