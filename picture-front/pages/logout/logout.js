@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('radar.logoutController', ['ngRoute'])
+angular.module('picture.logoutController', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/logout', {

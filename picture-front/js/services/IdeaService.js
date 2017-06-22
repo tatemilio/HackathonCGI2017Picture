@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('picture.roleService', [])
-    .factory('Role', ['$resource', function($resource){
+angular.module('picture.ideaService', [])
+    .factory('Idea', ['$resource', function($resource){
 
         return $resource('api/role/:id', {id: '@id'},
             {

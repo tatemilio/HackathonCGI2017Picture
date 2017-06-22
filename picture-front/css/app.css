@@ -1,6 +1,12 @@
+@import url(http://fr.allfont.net/allfont.css?fonts=arial-black);
+
 body{
-    font-family: Arial, sans-serif;
+    font-family: "Arial  Black", Arial, sans-serif;
     background-color: #FAFAFA;
+}
+
+main{
+  height: 100vh;
 }
 
 nav.navbar-top{
@@ -19,6 +25,7 @@ nav.navbar-top{
 
 .brand-logo{
     margin-top: 16px;
+    height: 37px;
 }
 
 .profile-pic{
@@ -29,4 +36,88 @@ nav.navbar-top{
   border-radius: 50%;
   border: solid 1px #FFFFFF;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+
+.background-green{
+  background-color: #699800;
+  color: #FFFFFF;
+}
+
+
+#login{
+  background-image: url("../img/bg-login.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  color: #FFFFFF;
+}
+
+#login::before{
+  display: block;
+  content: '';
+  background-color: #516676BB;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+#login > *{
+  position: relative;
+  z-index: 2;
+}
+
+#login .logo{
+  text-align: center;
+}
+
+#login .logo-img{
+  width: 70vw;
+  height: auto;
+  margin-top: 80px;
+}
+
+#login .hero-phrase{
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 2px;
+  margin-top: 80px;
+}
+
+#login form{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+#login form .form-group{
+  background-color: rgba(255, 255, 255, .2);
+  margin-bottom: 0px;
+  padding: 10px 20px;
+}
+
+#login form .form-group:first-child{
+  border-bottom: solid 1px rgba(255, 255, 255, .2);
+}
+
+#login form .form-group label{
+  opacity: .6;
+  font-size: .9em;
+}
+
+#login form .form-group input{
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+#login form button{
+  border-radius: 0px;
+  background-color: #5D991C;
+  border: none;
+  padding: 20px;
 }

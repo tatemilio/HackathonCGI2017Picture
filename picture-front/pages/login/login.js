@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('radar.loginController', ['ngRoute'])
+angular.module('picture.loginController', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/login', {
