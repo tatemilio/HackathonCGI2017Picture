@@ -1,4 +1,45 @@
 <div class="with-navbar">
-  <picture-header></picture-header>
+	<picture-header></picture-header>
+	<div class="annonce annonce-{{data.ideaAuthor.pictureProfile}}">
+		<div class="profile" >
+			<img src="img/profile/colas.jpg" alt="picture" class="pic-profile"/>
+		</div>
 
+		<div class="content">
+			<div class="text">
+				<h4>Le picture camp à ibiza ça vous tente ?</h4>
+			</div>
+			<div class="info">
+				<div class="user">
+					Colas Pomiès
+				</div>
+				-
+				<div class="date">
+					12 juin
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	
+	
+				
+			
+	<div class="annonce annonce-{{data.ideaAuthor.pictureProfile}}" style="display:block;">
+		<div style="display: flex; margin: auto;">
+			<div style="margin: auto;">
+				<canvas style="margin-left: 3px; margin-right: 3px;" id="meter1" width="15" height="200"></canvas>
+				<canvas style="margin-left: 3px; margin-right: 3px;" id="meter2" width="15" height="200"></canvas>
+				<canvas style="margin-left: 3px; margin-right: 3px;" id="meter3" width="15" height="200"></canvas>
+				<canvas style="margin-left: 3px; margin-right: 3px;" id="meter4" width="15" height="200"></canvas>
+				<canvas style="margin-left: 3px; margin-right: 3px;" id="meter5" width="15" height="200"></canvas>
+				<canvas style="margin-left: 3px; margin-right: 3px;" id="meter6" width="15" height="200"></canvas>
+				<canvas style="margin-left: 3px; margin-right: 3px;" id="meter7" width="15" height="200"></canvas>
+			</div>
+		</div>
+		<button onclick="recording()">Start recording</button>
+	</div>
+	
 </div>
