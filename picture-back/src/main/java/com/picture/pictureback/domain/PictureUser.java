@@ -16,7 +16,7 @@ import java.util.Set;
 
 
 @Entity
-public class PictureUser {
+public class PictureUser extends AbstractModel {
 
     public enum PictureProfile{
         EXPEDITION,
@@ -89,6 +89,11 @@ public class PictureUser {
     private String aboutMe;
 
     private String hobby;
+
+    @Override
+    public String getExplicitName(){
+        return nickName;
+    }
 
     @Email
     private String emailAddress;
