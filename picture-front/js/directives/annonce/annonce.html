@@ -1,20 +1,20 @@
 <div>
-	<div class="annonce annonce-{{data.mode}}">
+	<div class="annonce annonce-{{data.ideaAuthor.pictureProfile}}">
 		<div class="profile" >
-			<img src="img/profile-pic.jpg" alt="picture" class="pic-profile"/>
+			<img src="{{data.ideaAuthor.avatar}}" alt="picture" class="pic-profile"/>
 		</div>
 
 		<div class="content">
 			<div class="text">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				{{data.summary}}
 			</div>
 			<div class="info">
 				<div class="user">
-					Colas Pomiès
+					{{data.ideaAuthor.firstName}} {{data.ideaAuthor.lastName}}
 				</div>
 				-
 				<div class="date">
-					12 juin
+					{{data.openDate | date:'d MMMM'}}
 				</div>
 			</div>
 			<div class="coment">

@@ -1,13 +1,11 @@
 package com.picture.pictureback.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import com.picture.pictureback.config.Views;
 import com.picture.pictureback.domain.News;
-import com.picture.pictureback.domain.Poll;
 import com.picture.pictureback.repository.NewsRepository;
-import com.picture.pictureback.repository.PollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonView;
 
 import java.util.List;
 
@@ -16,6 +14,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("api/news")
+@CrossOrigin
 public class NewsController {
 
     @Autowired
