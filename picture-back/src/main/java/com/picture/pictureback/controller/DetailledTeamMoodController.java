@@ -1,8 +1,8 @@
 package com.picture.pictureback.controller;
 
-import com.picture.pictureback.domain.Poll;
+import com.picture.pictureback.domain.DetailledTeamMood;
 import com.picture.pictureback.domain.TeamMood;
-import com.picture.pictureback.repository.IdeaRepository;
+import com.picture.pictureback.repository.DetailledTeamMoodRepository;
 import com.picture.pictureback.repository.TeamMoodRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,16 +15,16 @@ import java.util.List;
  * Created by milaveaud on 22/06/2017.
  */
 @RestController
-@RequestMapping("api/teamMood")
-public class TeamMoodController {
+@RequestMapping("api/detailledTeamMood")
+public class DetailledTeamMoodController {
 
     @Autowired
-    private TeamMoodRepository teamMoodRepository;
+    private DetailledTeamMoodRepository detailledTeamMoodRepository;
 
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<TeamMood> getAll(){
-        return teamMoodRepository.findAll();
+    public List<DetailledTeamMood> getAll(){
+        return detailledTeamMoodRepository.findAll();
     }
 
 

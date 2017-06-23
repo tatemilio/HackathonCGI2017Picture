@@ -74,15 +74,15 @@ public class PictureUser {
 
 
     @OneToMany(targetEntity = Mood.class, mappedBy = "pictureUser", cascade = CascadeType.ALL)
-    @JsonView({Views.List.class, Views.Detail.class, Views.TagDetail.class})
+    @JsonView({Views.Detail.class, Views.TagDetail.class})
     private List<Mood> userMood;
 
     @OneToMany(targetEntity = Poll.class, mappedBy = "pollAuthor", cascade = CascadeType.ALL)
-    @JsonView({Views.List.class, Views.Detail.class, Views.TagDetail.class})
+    @JsonView({Views.Detail.class, Views.TagDetail.class})
     private List<Poll> userPoll;
 
     @OneToMany(targetEntity = PollFeedback.class, mappedBy = "pollVoter", cascade = CascadeType.ALL)
-    @JsonView({Views.List.class, Views.Detail.class, Views.TagDetail.class})
+    @JsonView({Views.Detail.class, Views.TagDetail.class})
     private List<PollFeedback> userPollFeedback;
 
     @Column(columnDefinition = "TEXT")
