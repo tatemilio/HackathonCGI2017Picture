@@ -18,6 +18,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("api/pictureUser/{pictureUserId}/mood")
+@CrossOrigin
 public class MoodController {
 
     @Autowired
