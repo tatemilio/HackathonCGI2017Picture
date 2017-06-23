@@ -53,7 +53,7 @@ public class MoodController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Mood add(@RequestBody Mood mood, HttpServletRequest request) {
+    public Mood addPictureUserMood(@RequestBody Mood mood, HttpServletRequest request) {
         mood.setId(null);
         PictureUser pictureUser = (PictureUser) request.getAttribute("user");
         mood.setPictureUser(pictureUser);
