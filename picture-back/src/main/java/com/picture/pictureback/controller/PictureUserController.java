@@ -1,5 +1,7 @@
 package com.picture.pictureback.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.picture.pictureback.config.Views;
 import com.picture.pictureback.domain.PictureUser;
 
 import com.picture.pictureback.repository.PictureUserRepository;
@@ -22,9 +24,11 @@ public class PictureUserController {
     private PictureUserRepository pictureUserRepository;
 
     @RequestMapping(method = RequestMethod.GET)
+    @JsonView(Views.Detail.class)
     public List<PictureUser> getAll(){
         return pictureUserRepository.findAll();
     }
+
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public PictureUser get(@PathVariable Long id) {

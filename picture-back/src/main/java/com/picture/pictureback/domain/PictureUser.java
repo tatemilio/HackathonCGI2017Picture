@@ -1,5 +1,7 @@
 package com.picture.pictureback.domain;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.picture.pictureback.config.Views;
 import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
@@ -72,12 +74,15 @@ public class PictureUser {
 
 
     @OneToMany(targetEntity = Mood.class, mappedBy = "pictureUser", cascade = CascadeType.ALL)
+    @JsonView({Views.List.class, Views.Detail.class, Views.TagDetail.class})
     private List<Mood> userMood;
 
     @OneToMany(targetEntity = Poll.class, mappedBy = "pollAuthor", cascade = CascadeType.ALL)
+    @JsonView({Views.List.class, Views.Detail.class, Views.TagDetail.class})
     private List<Poll> userPoll;
 
     @OneToMany(targetEntity = PollFeedback.class, mappedBy = "pollVoter", cascade = CascadeType.ALL)
+    @JsonView({Views.List.class, Views.Detail.class, Views.TagDetail.class})
     private List<PollFeedback> userPollFeedback;
 
     @Column(columnDefinition = "TEXT")
