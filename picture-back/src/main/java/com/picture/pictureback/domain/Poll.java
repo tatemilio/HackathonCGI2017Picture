@@ -1,5 +1,8 @@
 package com.picture.pictureback.domain;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.picture.pictureback.config.Views;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -23,13 +26,16 @@ public class Poll {
 
     @ManyToOne
     @JoinColumn(name = "pictureUserId")
+    @JsonView(Views.List.class)
     PictureUser pollAuthor;
 
     @OneToMany(targetEntity = PollFeedback.class, mappedBy = "poll", cascade = CascadeType.ALL)
+    @JsonView(Views.DeepDetail.class)
     private List<PollFeedback> pollFeedback;
 
     @OneToMany(targetEntity = PollOption.class, mappedBy = "poll", cascade = CascadeType.ALL)
-    private List<PollFeedback> pollOption;
+    @JsonView(Views.DeepDetail.class)
+    private List<PollOption> pollOption;
 
     public Long getId() {
         return id;
@@ -103,11 +109,11 @@ public class Poll {
         this.comment = comment;
     }
 
-    public List<PollFeedback> getPollOption() {
+    public List<PollOption> getPollOption() {
         return pollOption;
     }
 
-    public void setPollOption(List<PollFeedback> pollOption) {
+    public void setPollOption(List<PollOption> pollOption) {
         this.pollOption = pollOption;
     }
 

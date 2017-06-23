@@ -1,3 +1,6 @@
+delete from poll_feedback;
+delete from poll_option;
+delete from poll;
 delete from news_feedback;
 delete from news;
 delete from mood;
