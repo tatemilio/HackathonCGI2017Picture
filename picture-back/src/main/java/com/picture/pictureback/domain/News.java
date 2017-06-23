@@ -1,5 +1,8 @@
 package com.picture.pictureback.domain;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.picture.pictureback.config.Views;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -27,6 +30,7 @@ public class News {
     PictureUser ideaAuthor;
 
     @OneToMany(targetEntity = NewsFeedback.class, mappedBy = "news", cascade = CascadeType.ALL)
+    @JsonView({Views.Detail.class, Views.TagDetail.class})
     private List<PollFeedback> newsFeedback;
 
     //to be used when a medium such as a video is attached to the news
