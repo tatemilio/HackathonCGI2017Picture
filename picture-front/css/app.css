@@ -39,7 +39,7 @@ nav.navbar-top{
 }
 
 .with-navbar{
-  padding-top: 58px;
+  padding-top: 66px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -406,4 +406,65 @@ nav.navbar-top{
   0%{opacity: 1;}
   99%{height: 100vh;}
   100%{opacity: 0;height: 0px;}
+}
+
+
+.profile-header{
+  background-size: cover;
+  width: 100%;
+  height: 133px;
+  position: relative;
+  color: #FFFFFF;
+}
+
+.profile-header:before{
+  display: block;
+  content: '';
+  background-color: #516676BB;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+.profile-header > *{
+  z-index: 5;
+  position: relative;
+}
+
+.profile-header.bg-friends{
+  background-image: url('../img/bg-friends-small.jpg');
+  background-position: center top;
+}
+
+.profile-header.bg-adventure{
+  background-image: url('../img/bg-adventure-small.jpg');
+  background-position: center top;
+}
+
+.profile-header.bg-expedition{
+  background-image: url('../img/bg-expedition-small.jpg');
+  background-position: center top;
+}
+
+.profile-header .profile-pic img{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  float: right;
+  position: relative;
+  top: 85px;
+  right: 20px;
+}
+
+.profile-header .user-info{
+  padding-top: 20px;
+  padding-left: 15px;
+  font-size: 2em;
+  font-family: 'Montserrat';
+  font-weight: 100;
+  line-height: 1.4em;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1)
 }

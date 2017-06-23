@@ -40,7 +40,8 @@ angular.module('picture.welcomeController', ['ngRoute'])
               $scope.step = 3;
             }
             else if($scope.step == 3){
-
+              $rootScope.user = $scope.user;
+              $location.path('home');
             }
           }
 

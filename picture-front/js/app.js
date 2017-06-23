@@ -9,6 +9,7 @@ angular.module('picture', [
   'uiSwitch',
   'ngToast',
   'picture.header',
+  'picture.profileHeader',
   'picture.userService',
   'picture.fileReader',
   'picture.fileSelect',
@@ -32,6 +33,13 @@ angular.module('picture', [
     }])
     .run(['$rootScope', '$location', 'UserService', function($rootScope, $location, UserService){
         $rootScope.isNavCollapsed = true;
+        $rootScope.user = $rootScope.user || {
+          avatar: 'img/profile-pic.jpg',
+          nom: 'ROPITEAUX',
+          prenom: 'Ivan',
+          email: 'ivan.ropiteaux@gmail.com'
+        };
+
         UserService.isConnected();
         $rootScope.$on('$routeChangeStart', function(e, next, current){
             if (next.$$route.authorized){
