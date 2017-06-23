@@ -8,6 +8,7 @@ angular.module('picture', [
   'ui.bootstrap',
   'uiSwitch',
   'ngToast',
+  'picture.header',
   'picture.userService',
   'picture.fileReader',
   'picture.fileSelect',
@@ -30,6 +31,7 @@ angular.module('picture', [
       });
     }])
     .run(['$rootScope', '$location', 'UserService', function($rootScope, $location, UserService){
+        $rootScope.isNavCollapsed = true;
         UserService.isConnected();
         $rootScope.$on('$routeChangeStart', function(e, next, current){
             if (next.$$route.authorized){

@@ -36,11 +36,11 @@ angular.module('picture.welcomeController', ['ngRoute'])
             if($scope.step == 1){
               $scope.step = 2;
             }
-            else if($scope.step == 1){
+            else if($scope.step == 2){
               $scope.step = 3;
             }
             else if($scope.step == 3){
-              
+
             }
           }
 

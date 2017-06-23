@@ -4,6 +4,11 @@
       <h1>première connexion</h1>
     </header>
 
+    <div class="welcome-message" ng-class="{'show': step == 2}">
+      <div>Bonjour</div>
+      <div>{{user.prenom}}</div>
+    </div>
+
     <div ng-show="step == 1" class="step1">
       <div class="background-grey">
         <img class="logo-small" src="img/logo_small_white.png" alt="Picture" />
@@ -14,12 +19,12 @@
 
         <div class="form-group has-feedback">
             <label class="control-label" for="prenom">Prénom</label>
-            <input type="mail" class="form-control" id="prenom" ng-model="user.prenom" required/>
+            <input type="mail" class="form-control" id="prenom" ng-model="user.prenom" required="required" />
         </div>
 
         <div class="form-group has-feedback">
             <label class="control-label" for="prenom">Nom</label>
-            <input type="mail" class="form-control" id="nom" ng-model="user.nom" required />
+            <input type="mail" class="form-control" id="nom" ng-model="user.nom" required="required" />
         </div>
 
         <div class="form-group has-feedback">
@@ -51,19 +56,19 @@
           <div class="select-mode-container">
             <div class="select-mode">
               <label>
-                <input type="radio" name="mode" value="adventure" ng-model="user.mode" />
+                <input type="radio" name="mode" value="adventure" ng-model="user.mode" required="required" />
                 <div class="mode mode-adventure"></div>
               </label>
             </div>
             <div class="select-mode">
               <label>
-                <input type="radio" name="mode" value="friends" ng-model="user.mode" />
+                <input type="radio" name="mode" value="friends" ng-model="user.mode" required="required" />
                 <div class="mode mode-friends"></div>
               </label>
             </div>
             <div class="select-mode">
               <label>
-                <input type="radio" name="mode" value="expedition" ng-model="user.mode" />
+                <input type="radio" name="mode" value="expedition" ng-model="user.mode" required="required" />
                 <div class="mode mode-expedition"></div>
               </label>
             </div>
