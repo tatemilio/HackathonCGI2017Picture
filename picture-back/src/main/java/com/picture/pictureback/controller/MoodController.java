@@ -1,7 +1,5 @@
 package com.picture.pictureback.controller;
 
-import com.fasterxml.jackson.annotation.JsonView;
-import com.picture.pictureback.config.Views;
 import com.picture.pictureback.domain.Mood;
 import com.picture.pictureback.domain.PictureUser;
 import com.picture.pictureback.domain.Poll;
@@ -19,7 +17,7 @@ import java.util.List;
  * Created by milaveaud on 22/06/2017.
  */
 @RestController
-@RequestMapping("api/mood")
+@RequestMapping("api/pictureUser/{pictureUserId}/mood")
 public class MoodController {
 
     @Autowired
@@ -29,8 +27,7 @@ public class MoodController {
     private PictureUserRepository pictureUserRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    @JsonView(Views.List.class)
-    public List<Mood> getAll(){
+    public List<Mood> getAll(@PathVariable long pictureUserId){
         return moodRepository.findAll();
     }
 
@@ -50,9 +47,9 @@ public class MoodController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Mood add(@RequestBody Mood mood, HttpServletRequest request) {
+    public Mood add(@PathVariable long pictureUserId, @RequestBody Mood mood, HttpServletRequest request) {
         mood.setId(null);
-        PictureUser pictureUser = (PictureUser) request.getAttribute("user");
+        PictureUser pictureUser = pictureUserRepository.findOne(pictureUserId);
         mood.setPictureUser(pictureUser);
         mood.setMoodDate(new Date());
         mood.setMoodValue(mood.getMoodValue());
