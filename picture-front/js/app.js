@@ -25,6 +25,7 @@ angular.module('picture', [
   'picture.pollFeedbackService',
   'picture.pollService',
   'picture.homeController',
+  'picture.pollController',
   'picture.welcomeController',
   'picture.registerController',
   'picture.loginController',
