@@ -6,7 +6,7 @@ delete from picture_user;
 copy picture_user from 'c:\temp\picture_user.csv' (FORMAT 'csv', DELIMITER ';', HEADER);
 copy mood from 'c:\temp\mood.csv' (FORMAT 'csv', DELIMITER ';', HEADER);
 copy news from 'c:\temp\news.csv' (FORMAT 'csv', DELIMITER ';', HEADER);
---copy news_feedback from 'c:\temp\news_feedback.csv' (FORMAT 'csv', DELIMITER ';', HEADER);
+copy news_feedback from 'c:\temp\news_feedback.csv' (FORMAT 'csv', DELIMITER ';', HEADER);
 
 select nextval('hibernate_sequence');
 select nextval('hibernate_sequence');
