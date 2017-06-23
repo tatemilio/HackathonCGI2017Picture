@@ -6,10 +6,9 @@ angular.module('picture.homeController', ['ngRoute'])
         $routeProvider.when('/home', {
           templateUrl: 'pages/home/home.html',
             controller: 'HomeCtrl',
-            authorized: true
+            authorized: false
         });
     }])
 
-    .controller('HomeCtrl', ['$scope', '$uibModal', function($scope, $uibModal) {
-
+    .controller('HomeCtrl', ['$rootScope', '$scope', '$uibModal', function($rootScope, $scope, $uibModal) {
     }]);

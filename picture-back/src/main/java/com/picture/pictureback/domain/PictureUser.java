@@ -50,6 +50,8 @@ public class PictureUser {
 
     private String lastName;
 
+    private String nickName;
+
     private Date birthday;
 
     private Date jobBirthday;
@@ -242,5 +244,13 @@ public class PictureUser {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 }
