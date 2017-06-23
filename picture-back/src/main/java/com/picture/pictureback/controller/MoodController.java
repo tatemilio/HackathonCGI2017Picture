@@ -36,12 +36,6 @@ public class MoodController {
         return moodRepository.findOne(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public Mood add(@RequestBody Mood mood) {
-        mood.setId(null);
-        return moodRepository.saveAndFlush(mood);
-    }
-
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public Mood update(@RequestBody Mood mood, @PathVariable Long id) {
         mood.setId(id);
@@ -53,7 +47,7 @@ public class MoodController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Mood addPictureUserMood(@RequestBody Mood mood, HttpServletRequest request) {
+    public Mood add(@RequestBody Mood mood, HttpServletRequest request) {
         mood.setId(null);
         PictureUser pictureUser = (PictureUser) request.getAttribute("user");
         mood.setPictureUser(pictureUser);
