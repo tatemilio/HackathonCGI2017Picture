@@ -1,11 +1,13 @@
 package com.picture.pictureback.controller;
 
+import com.picture.pictureback.config.Views;
 import com.picture.pictureback.domain.News;
 import com.picture.pictureback.domain.Poll;
 import com.picture.pictureback.repository.NewsRepository;
 import com.picture.pictureback.repository.PollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonView;
 
 import java.util.List;
 
@@ -20,6 +22,7 @@ public class NewsController {
     private NewsRepository newsRepository;
 
     @RequestMapping(method = RequestMethod.GET)
+    @JsonView(Views.List.class)
     public List<News> getAll(){
         return newsRepository.findAll();
     }
