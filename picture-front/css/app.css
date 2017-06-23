@@ -7,7 +7,7 @@ html {
 
 body{
     font-family: "Arial  Black", Arial, sans-serif;
-    background-color: #FFFFFF;
+    background-color: #F3F3F4;
 }
 
 main{
@@ -65,10 +65,19 @@ nav.navbar-top{
 
 .brand-logo{
     height: 37px;
+     transition: background-color 1000ms linear;
 }
 
 .brand-logo.logo-green{
   background-color: #4D9C38;
+}
+
+.brand-logo.logo-red{
+  background-color: #9c3838;
+}
+
+.brand-logo.logo-yellow{
+  background-color: #9c7f38;
 }
 
 .navbar-header .pull-right a{
@@ -195,13 +204,28 @@ nav.navbar-top{
 
 .annonce{
 	display: flex;
-	float: left;
-	margin: 5px;
+	margin: 15px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+}
+
+.annonce-adventure{
+  border-left: solid 3px #A87226;
+}
+
+.annonce-friends{
+  border-left: solid 3px #0081BC;
+}
+
+.annonce-expedition{
+  border-left: solid 3px #858A62;
 }
 
 .annonce .profile {
 	position: relative;
-	margin: auto;
+  padding: 5px;
+  align-self: flex-start;
 }
 
 .annonce .profile .pic-profile {
@@ -214,8 +238,7 @@ nav.navbar-top{
 .annonce .profile .style {
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	width: 23px;
+	left: 6px;
 	width: 23px;
 	height: auto;
 	border-radius: 100%;
@@ -240,7 +263,7 @@ nav.navbar-top{
 .annonce .content {
 	position: relative;
 	margin: auto;
-	padding: 5px 5px 5px 20px;
+	padding: 5px;
 }
 
 .annonce .content .info{
@@ -263,7 +286,7 @@ nav.navbar-top{
 
 .annonce .content .coment{
 	color: grey;
-	float: left;
+	float: right;
 }
 
 .event{
@@ -367,6 +390,11 @@ nav.navbar-top{
   bottom:0px;
   left: 0px;
   right: 0px;
+}
+
+#welcome{
+  background-color: #FFFFFF;
+  min-height: 100vh;
 }
 
 #welcome h1{
@@ -577,6 +605,7 @@ nav.navbar-top{
   height: 133px;
   position: relative;
   color: #FFFFFF;
+  margin-bottom: 40px;
 }
 
 .profile-header:before{
@@ -761,4 +790,155 @@ nav.navbar-top{
 .tele .tele-footer .tele-news > marquee {
 	font-size: 3em;
 	margin:auto;
+}
+
+news-feed, .newsfeed{
+  background-color: #;
+  height: 100%;
+}
+
+/** ACTIONS BUTTONS */
+.float-btn-group {
+  position: fixed;
+  float: right;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 65px;
+  padding-left: 15px;
+  min-height: 65px;
+  overflow: hidden;
+  right: 17px;
+  bottom: 26px;
+}
+
+.float-btn-group.open {
+    height: 270px;
+}
+
+.float-btn-group.open .icon-bars {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.float-btn-group .btn-float {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.11);
+}
+
+.float-btn-group .btn-triger {
+  position: absolute;
+  bottom: 0px;
+}
+
+
+.float-btn-group .icon-bars {
+    background: #fff;
+    height: 1px;
+    width: 22px;
+    margin: auto;
+    display: block;
+    position: relative;
+    -moz-transition: 0.3s 0.3s;
+    -o-transition: 0.3s 0.3s;
+    -webkit-transition: 0.3s;
+    -webkit-transition-delay: 0.3s;
+    -webkit-transition: 0.3s 0.3s;
+    transition: 0.3s 0.3s;
+}
+
+.float-btn-group .icon-bars::after {
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 1px;
+    background: #fff;
+    top: -10px;
+}
+
+.float-btn-group .btn-list {
+  opacity: 0;
+  height  : 215px;
+  width: 50px;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+.float-btn-group.open .btn-list {
+    opacity: 1;
+}
+
+
+.float-btn-group .pink {
+    background: #e91e63;
+}
+
+.float-btn-group .yellow {
+    background: #ffa000;
+}
+
+.float-btn-group .blue {
+    background: #40c4ff;
+}
+
+.float-btn-group .green {
+    background: #00e676;
+}
+
+.float-btn-group .purple {
+    background: #8e24aa;
+}
+
+.mood-selector{
+  background-color: white;
+  color: #333;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.mood-selector .brand-logo{
+  cursor: pointer;
+}
+
+.mood-selector h3{
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.welcome-message div:last-child{
+  animation-name: last-row;
+}
+
+.mood-selector.hiding{
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-name: hide;
+}
+
+.mood-selector.hide{
+  display: none;
+}
+
+@keyframes hide {
+  0% {opacity: 1}
+  /*99% {height: auto;}*/
+  100% {opacity: 0;}
+
 }

@@ -1,0 +1,27 @@
+<div>
+	<div class="annonce annonce-{{data.ideaAuthor.pictureProfile}}">
+		<div class="profile" >
+			<img src="{{data.ideaAuthor.avatar}}" alt="picture" class="pic-profile"/>
+		</div>
+
+		<div class="content">
+			<div class="text">
+				<h4>{{data.title}}</h4>
+				{{data.summary}}
+			</div>
+			<div class="info">
+				<div class="user">
+					{{data.ideaAuthor.firstName}} {{data.ideaAuthor.lastName}}
+				</div>
+				-
+				<div class="date">
+					{{data.openDate | date:'d MMMM'}}
+				</div>
+			</div>
+			<div class="coment">
+				3 commentaires
+			</div>
+		</div>
+	</div>
+
+</div>

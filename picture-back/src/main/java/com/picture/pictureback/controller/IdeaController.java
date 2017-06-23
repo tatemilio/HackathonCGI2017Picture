@@ -13,6 +13,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("api/idea")
+@CrossOrigin
 public class IdeaController {
 
     @Autowired

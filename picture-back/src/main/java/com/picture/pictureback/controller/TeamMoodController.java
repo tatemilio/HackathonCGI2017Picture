@@ -5,6 +5,7 @@ import com.picture.pictureback.domain.TeamMood;
 import com.picture.pictureback.repository.IdeaRepository;
 import com.picture.pictureback.repository.TeamMoodRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("api/teamMood")
+@CrossOrigin
 public class TeamMoodController {
 
     @Autowired

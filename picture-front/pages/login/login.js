@@ -11,9 +11,9 @@ angular.module('picture.loginController', ['ngRoute'])
 
     .controller('LoginCtrl', ['$rootScope', '$scope', '$location', 'ngToast', 'UserService',
         function($rootScope, $scope, $location, ngToast, UserService) {
-            UserService.isConnected().then(function(response){
-                $location.path('home');
-            });
+            // UserService.isConnected().then(function(response){
+            //     $location.path('home');
+            // });
 
             $scope.credentials = {}
 
