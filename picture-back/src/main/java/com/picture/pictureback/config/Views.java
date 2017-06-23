@@ -11,4 +11,8 @@ public class Views {
     public static class Detail {
     }
 
+    public static class DeepDetail {
+
+    }
+
 }
