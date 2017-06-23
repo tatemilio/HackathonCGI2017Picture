@@ -30,8 +30,8 @@ public class News {
     PictureUser ideaAuthor;
 
     @OneToMany(targetEntity = NewsFeedback.class, mappedBy = "news", cascade = CascadeType.ALL)
-    @JsonView({Views.Detail.class, Views.TagDetail.class})
-    private List<PollFeedback> newsFeedback;
+    @JsonView({Views.Detail.class})
+    private List<NewsFeedback> newsFeedback;
 
     //to be used when a medium such as a video is attached to the news
     private String pathToMedium;
@@ -84,11 +84,11 @@ public class News {
         this.ideaAuthor = ideaAuthor;
     }
 
-    public List<PollFeedback> getNewsFeedback() {
+    public List<NewsFeedback> getNewsFeedback() {
         return newsFeedback;
     }
 
-    public void setNewsFeedback(List<PollFeedback> newsFeedback) {
+    public void setNewsFeedback(List<NewsFeedback> newsFeedback) {
         this.newsFeedback = newsFeedback;
     }
 

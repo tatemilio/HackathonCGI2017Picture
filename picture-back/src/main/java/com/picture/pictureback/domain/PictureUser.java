@@ -74,15 +74,15 @@ public class PictureUser extends AbstractModel {
 
 
     @OneToMany(targetEntity = Mood.class, mappedBy = "pictureUser", cascade = CascadeType.ALL)
-    @JsonView({Views.Detail.class, Views.TagDetail.class})
+    @JsonView({Views.Detail.class})
     private List<Mood> userMood;
 
     @OneToMany(targetEntity = Poll.class, mappedBy = "pollAuthor", cascade = CascadeType.ALL)
-    @JsonView({Views.Detail.class, Views.TagDetail.class})
+    @JsonView({Views.Detail.class})
     private List<Poll> userPoll;
 
     @OneToMany(targetEntity = PollFeedback.class, mappedBy = "pollVoter", cascade = CascadeType.ALL)
-    @JsonView({Views.Detail.class, Views.TagDetail.class})
+    @JsonView({Views.Detail.class})
     private List<PollFeedback> userPollFeedback;
 
     @Column(columnDefinition = "TEXT")
