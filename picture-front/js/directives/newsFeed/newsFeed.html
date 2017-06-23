@@ -1,4 +1,4 @@
 <div class="newsfeed">
-	<annonce ng-repeat="new in news" data="new"></annonce>
+	<annonce ng-repeat="new in news | orderBy: '-openDate'" data="new"></annonce>
 
 </div>

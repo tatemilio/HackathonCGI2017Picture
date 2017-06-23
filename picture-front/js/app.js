@@ -10,6 +10,7 @@ angular.module('picture', [
   'ngToast',
   'picture.header',
   'picture.profileHeader',
+  'picture.mood',
   'picture.annonce',
   'picture.actionButtons',
   'picture.newsFeed',
@@ -56,11 +57,13 @@ angular.module('picture')
     .run(['$rootScope', '$location', 'UserService', function($rootScope, $location, UserService){
         $rootScope.isNavCollapsed = true;
         $rootScope.user = $rootScope.user || {
-          avatar: 'img/profile-pic.jpg',
+          avatar: 'img/profile/ivan.jpg',
           nom: 'ROPITEAUX',
           prenom: 'Ivan',
           email: 'ivan.ropiteaux@gmail.com'
         };
+
+        $rootScope.teamMood = localStorage.getItem('teamMood') || 'green';
 
         UserService.isConnected();
         $rootScope.$on('$routeChangeStart', function(e, next, current){

@@ -61,10 +61,19 @@ nav.navbar-top{
 
 .brand-logo{
     height: 37px;
+     transition: background-color 1000ms linear;
 }
 
 .brand-logo.logo-green{
   background-color: #4D9C38;
+}
+
+.brand-logo.logo-red{
+  background-color: #9c3838;
+}
+
+.brand-logo.logo-yellow{
+  background-color: #9c7f38;
 }
 
 .navbar-header .pull-right a{
@@ -668,7 +677,7 @@ news-feed, .newsfeed{
 }
 
 .float-btn-group.open {
-    height: 285px;
+    height: 270px;
 }
 
 .float-btn-group.open .icon-bars {
@@ -692,6 +701,12 @@ news-feed, .newsfeed{
     cursor: pointer;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.11);
 }
+
+.float-btn-group .btn-triger {
+  position: absolute;
+  bottom: 0px;
+}
+
 
 .float-btn-group .icon-bars {
     background: #fff;
@@ -720,11 +735,20 @@ news-feed, .newsfeed{
 .float-btn-group .btn-list {
   opacity: 0;
   height  : 215px;
+  width: 50px;
   position: absolute;
   right: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
 }
+
+.float-btn-group.open .btn-list {
+    opacity: 1;
+}
+
 
 .float-btn-group .pink {
     background: #e91e63;
@@ -732,4 +756,54 @@ news-feed, .newsfeed{
 
 .float-btn-group .yellow {
     background: #ffa000;
+}
+
+.float-btn-group .blue {
+    background: #40c4ff;
+}
+
+.float-btn-group .green {
+    background: #00e676;
+}
+
+.float-btn-group .purple {
+    background: #8e24aa;
+}
+
+.mood-selector{
+  background-color: white;
+  color: #333;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.mood-selector .brand-logo{
+  cursor: pointer;
+}
+
+.mood-selector h3{
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.welcome-message div:last-child{
+  animation-name: last-row;
+}
+
+.mood-selector.hiding{
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-name: hide;
+}
+
+.mood-selector.hide{
+  display: none;
+}
+
+@keyframes hide {
+  0% {opacity: 1}
+  /*99% {height: auto;}*/
+  100% {opacity: 0;}
+
 }
