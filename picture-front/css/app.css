@@ -3,7 +3,7 @@
 
 body{
     font-family: "Arial  Black", Arial, sans-serif;
-    background-color: #FFFFFF;
+    background-color: #F3F3F4;
 }
 
 main{
@@ -191,13 +191,28 @@ nav.navbar-top{
 
 .annonce{
 	display: flex;
-	float: left;
-	margin: 5px;
+	margin: 15px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+}
+
+.annonce-adventure{
+  border-left: solid 3px #A87226;
+}
+
+.annonce-friends{
+  border-left: solid 3px #0081BC;
+}
+
+.annonce-expedition{
+  border-left: solid 3px #858A62;
 }
 
 .annonce .profile {
 	position: relative;
-	margin: auto;
+  padding: 5px;
+  align-self: flex-start;
 }
 
 .annonce .profile .pic-profile {
@@ -210,8 +225,7 @@ nav.navbar-top{
 .annonce .profile .style {
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	width: 23px;
+	left: 6px;
 	width: 23px;
 	height: auto;
 	border-radius: 100%;
@@ -236,7 +250,7 @@ nav.navbar-top{
 .annonce .content {
 	position: relative;
 	margin: auto;
-	padding: 5px 5px 5px 20px;
+	padding: 5px;
 }
 
 .annonce .content .info{
@@ -259,7 +273,7 @@ nav.navbar-top{
 
 .annonce .content .coment{
 	color: grey;
-	float: left;
+	float: right;
 }
 
 .event{
@@ -363,6 +377,11 @@ nav.navbar-top{
   bottom:0px;
   left: 0px;
   right: 0px;
+}
+
+#welcome{
+  background-color: #FFFFFF;
+  min-height: 100vh;
 }
 
 #welcome h1{
@@ -573,6 +592,7 @@ nav.navbar-top{
   height: 133px;
   position: relative;
   color: #FFFFFF;
+  margin-bottom: 40px;
 }
 
 .profile-header:before{
@@ -625,4 +645,10 @@ nav.navbar-top{
   font-weight: 100;
   line-height: 1.4em;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 1)
+}
+
+
+news-feed, .newsfeed{
+  background-color: #;
+  height: 100%;
 }

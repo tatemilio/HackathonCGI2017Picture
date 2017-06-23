@@ -1,0 +1,33 @@
+<header>
+  <nav class="navbar navbar-default navbar-top navbar-fixed-top">
+   <div class="container-fluid">
+
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" ng-click="isNavCollapsed = !isNavCollapsed">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+       <a class="navbar-brand" href="#">
+         <img class="brand-logo logo-green" src="img/logo_white_reverse.png" alt="Picture" />
+       </a>
+       <div class="pull-right">
+          <a href="#/photo" class="camera"><i class="pe-7s-camera"></i></a>
+          <a href="#/profile"><img class="profile-pic img-responsive mood-ok" src="{{user.avatar}}" alt="You"/></a>
+       </div>
+     </div>
+
+     <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Accueil</a></li>
+        <li><a href="#/staff">Staff</a></li>
+        <li><a href="#/event">Evenements</a></li>
+        <li><a href="#/poll">Sondages</a></li>
+        <li><a href="#/ideas">Boite à idées</a></li>
+       </ul>
+     </div>
+
+   </div>
+  </nav>
+</header>

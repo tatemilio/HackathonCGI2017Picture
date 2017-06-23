@@ -10,6 +10,8 @@ angular.module('picture', [
   'ngToast',
   'picture.header',
   'picture.profileHeader',
+  'picture.annonce',
+  'picture.newsFeed',
   'picture.userService',
   'picture.fileReader',
   'picture.fileSelect',
