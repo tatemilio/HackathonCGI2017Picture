@@ -1,5 +1,7 @@
 package com.picture.pictureback.domain;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.picture.pictureback.config.Views;
 import sun.util.calendar.LocalGregorianCalendar;
 
 import javax.persistence.*;
@@ -20,6 +22,7 @@ public class Mood {
 
     @ManyToOne
     @JoinColumn(name = "pictureUserId")
+    @JsonView(Views.List.class)
     PictureUser pictureUser;
 
 

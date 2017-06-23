@@ -30,7 +30,7 @@ public class MoodController {
     private PictureUserRepository pictureUserRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    @JsonView(Views.List.class)
+    @JsonView(Views.Detail.class)
     public List<Mood> getAll(@PathVariable long pictureUserId){
         return moodRepository.findAll();
     }
@@ -51,7 +51,7 @@ public class MoodController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-
+    @JsonView(Views.Detail.class)
     public Mood add(@PathVariable long pictureUserId, @RequestBody Mood mood, HttpServletRequest request) {
         mood.setId(null);
         PictureUser pictureUser = pictureUserRepository.findOne(pictureUserId);

@@ -30,7 +30,7 @@ public class News {
     PictureUser ideaAuthor;
 
     @OneToMany(targetEntity = NewsFeedback.class, mappedBy = "news", cascade = CascadeType.ALL)
-    @JsonView({Views.Detail.class, Views.TagDetail.class})
+    @JsonView({Views.Detail.class})
     private List<NewsFeedback> newsFeedback;
 
     //to be used when a medium such as a video is attached to the news
