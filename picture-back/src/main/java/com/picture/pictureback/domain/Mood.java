@@ -33,7 +33,27 @@ public class Mood {
         this.pictureUser = pictureUser;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public Date getMoodDate() {
+        return moodDate;
+    }
 
+    public void setMoodDate(Date moodDate) {
+        this.moodDate = moodDate;
+    }
+
+    public int getMoodValue() {
+        return moodValue;
+    }
+
+    public void setMoodValue(int moodValue) {
+        this.moodValue = moodValue;
+    }
 }

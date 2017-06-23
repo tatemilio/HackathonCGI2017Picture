@@ -24,7 +24,7 @@ public class PictureUserController {
     private PictureUserRepository pictureUserRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    @JsonView(Views.Detail.class)
+    @JsonView(Views.List.class)
     public List<PictureUser> getAll(){
         return pictureUserRepository.findAll();
     }

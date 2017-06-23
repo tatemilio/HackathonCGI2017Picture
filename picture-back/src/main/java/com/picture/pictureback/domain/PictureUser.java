@@ -16,7 +16,7 @@ import java.util.Set;
 
 
 @Entity
-public class PictureUser {
+public class PictureUser extends AbstractModel {
 
     public enum PictureProfile{
         EXPEDITION,
@@ -74,21 +74,26 @@ public class PictureUser {
 
 
     @OneToMany(targetEntity = Mood.class, mappedBy = "pictureUser", cascade = CascadeType.ALL)
-    @JsonView({Views.List.class, Views.Detail.class, Views.TagDetail.class})
+    @JsonView({Views.Detail.class, Views.TagDetail.class})
     private List<Mood> userMood;
 
     @OneToMany(targetEntity = Poll.class, mappedBy = "pollAuthor", cascade = CascadeType.ALL)
-    @JsonView({Views.List.class, Views.Detail.class, Views.TagDetail.class})
+    @JsonView({Views.Detail.class, Views.TagDetail.class})
     private List<Poll> userPoll;
 
     @OneToMany(targetEntity = PollFeedback.class, mappedBy = "pollVoter", cascade = CascadeType.ALL)
-    @JsonView({Views.List.class, Views.Detail.class, Views.TagDetail.class})
+    @JsonView({Views.Detail.class, Views.TagDetail.class})
     private List<PollFeedback> userPollFeedback;
 
     @Column(columnDefinition = "TEXT")
     private String aboutMe;
 
     private String hobby;
+
+    @Override
+    public String getExplicitName(){
+        return nickName;
+    }
 
     @Email
     private String emailAddress;
