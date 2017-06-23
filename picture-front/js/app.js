@@ -11,6 +11,7 @@ angular.module('picture', [
   'picture.header',
   'picture.profileHeader',
   'picture.annonce',
+  'picture.actionButtons',
   'picture.newsFeed',
   'picture.userService',
   'picture.fileReader',

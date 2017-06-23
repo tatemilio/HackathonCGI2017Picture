@@ -652,3 +652,84 @@ news-feed, .newsfeed{
   background-color: #;
   height: 100%;
 }
+
+/** ACTIONS BUTTONS */
+.float-btn-group {
+  position: fixed;
+  float: right;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 65px;
+  padding-left: 15px;
+  min-height: 65px;
+  overflow: hidden;
+  right: 17px;
+  bottom: 26px;
+}
+
+.float-btn-group.open {
+    height: 285px;
+}
+
+.float-btn-group.open .icon-bars {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.float-btn-group .btn-float {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.11);
+}
+
+.float-btn-group .icon-bars {
+    background: #fff;
+    height: 1px;
+    width: 22px;
+    margin: auto;
+    display: block;
+    position: relative;
+    -moz-transition: 0.3s 0.3s;
+    -o-transition: 0.3s 0.3s;
+    -webkit-transition: 0.3s;
+    -webkit-transition-delay: 0.3s;
+    -webkit-transition: 0.3s 0.3s;
+    transition: 0.3s 0.3s;
+}
+
+.float-btn-group .icon-bars::after {
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 1px;
+    background: #fff;
+    top: -10px;
+}
+
+.float-btn-group .btn-list {
+  opacity: 0;
+  height  : 215px;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.float-btn-group .pink {
+    background: #e91e63;
+}
+
+.float-btn-group .yellow {
+    background: #ffa000;
+}
